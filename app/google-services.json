@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "517690323375",
+    "firebase_url": "https://friendlychat-f96c5.firebaseio.com",
+    "project_id": "friendlychat-f96c5",
+    "storage_bucket": "friendlychat-f96c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517690323375:android:2377dd50fc71cb8d",
+        "android_client_info": {
+          "package_name": "com.giomerito.chatsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517690323375-t27bhchi6hnsjfj5cvn8jlsemoegqarb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.giomerito.chatsystem",
+            "certificate_hash": "d28d8f804374df9826589f1d1f9d40bc60db509b"
+          }
+        },
+        {
+          "client_id": "517690323375-as85bi4iv0o4pl59v3r4rdhogq38d1p9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDio63mkxsMlSMMkkGRzyFHEDeGpRe8XUk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517690323375-as85bi4iv0o4pl59v3r4rdhogq38d1p9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
