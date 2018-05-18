@@ -19,6 +19,8 @@ import com.giomerito.chatsystem.MessageAdapter;
 import com.giomerito.chatsystem.R;
 import com.giomerito.chatsystem.model.FriendlyMessage;
 import com.giomerito.chatsystem.util.constants;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,12 +36,18 @@ public class MainActivity extends AppCompatActivity {
 
     private String mUsername;
 
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference mMessagesDatabaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mUsername = constants.ANONYMOUS;
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("messages");
 
         //Inicializa referencias das views
         mProgressBar = findViewById(R.id.progressBar_main_activity);
@@ -92,7 +100,9 @@ public class MainActivity extends AppCompatActivity {
         mSendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO enviar message
+                //Enviando message e gravando no Firebase-Database
+                FriendlyMessage friendlyMessage = new FriendlyMessage(mMessageEditText.getText().toString(), mUsername, null);
+                mMessagesDatabaseReference.push().setValue(friendlyMessage);
 
                 //Limpa o input box
                 mMessageEditText.setText("");
